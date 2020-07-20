@@ -1,12 +1,16 @@
 'use strict';
 
-function abc(lang , gru){
-    console.log('dsad');
-    gru();
-}
+const items = ['item1', 'item2', 'item3'];
+const copy = [];
 
-function dsa(){
-    console.log('aaa');
-}
+// до
+//for (let i = 0; i < items.length; i++) {
+//  copy.push(items[i]);
+//}
 
-abc('js', dsa);
+// после
+items.forEach(function(item){
+  copy.push(item);
+});
+
+console.log(copy);
